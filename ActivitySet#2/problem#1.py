@@ -1,12 +1,8 @@
-
-
 def add(a, b):
-    return  # ...
-
-
+    return a+b
 def main():
-    a = input  # ...
-    b = input  # ...
-
+    a = int(input('ENTER the value of a:'))
+    b = int(input('ENTER the value of b:'))
     c = add(a, b)
-    print  # ...
+    print(f'The Sum of {a}+{b}={c}')
+main()
