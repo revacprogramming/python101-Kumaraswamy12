@@ -1,4 +1,3 @@
-# Files
 fs=0.0
 c=0.0
 fname = input("Enter file name: ")
