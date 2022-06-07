@@ -9,3 +9,4 @@ for line in handle:
          total+=int(i)
     
 print(total)
+
