@@ -1,10 +1,17 @@
 
 class Menu:
-    """fill in class definition here"""
+      def show(x):
+        print(x.food,x.price)
+      def add(x,food,price):
+           x.food=food
+           x.price=price
+        
 
 
 m = Menu()  # Menu is a class
-m.add("idly", 10)
-m.add("vada". 20)
-
+m.show(add("idly", 10))
+m.add("vada", 20)
 m.show()
+
+
+
