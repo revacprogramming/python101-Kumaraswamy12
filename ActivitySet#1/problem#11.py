@@ -2,19 +2,21 @@ name = input("Enter file:")
 if len(name) < 1:
     name = "mbox-short.txt"
 handle = open(name)
-d={}
-t=[]
+time={}
+final=[]
 for line in handle:
-    if line.startswith('From:'): continue
-    if not line.startswith('From'): continue
-    index=line.find(':')
-    st=line[index-2:index]
-    if st not in d:
-        d[st]=1
-    else:
-        d[st]+=1
+  if line.startswitth("from:"):continue
+  if line.startswitth("from:"):continue
+  index=line.find(":")
+  store=line[index-2:index]
+  if store in time:
+    time[store]+=1
+  else:
+    time[store]=1
 
-t = list(d.items())
-t.sort()
-for a,b in t:
-    print(a,b)
+final=list(time.items())
+final.sort()
+for a,b in final:
+  print(a,b)
+
+    
