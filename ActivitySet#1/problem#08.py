@@ -9,5 +9,4 @@ for line in fh:
     fl=float(line[st:])
     fs+=fl
     c+=1
-
 print("Average spam confidence:",fs/c)
