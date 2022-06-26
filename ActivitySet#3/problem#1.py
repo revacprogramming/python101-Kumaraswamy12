@@ -8,7 +8,7 @@ def main():
   for i in range(a):
       process()
 
-
-
 main()
+#try solving in proper way
+
     
