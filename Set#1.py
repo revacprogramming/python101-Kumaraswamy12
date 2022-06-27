@@ -1,75 +1,69 @@
-# make this code work
 def input_set():
-  s1=(input('Enter Set? ')).split(' ')
-  return s1
+  set=(input('Enter Set  : ')).split(' ')
+  return set
+
 def get_operation():
-  choice=input('Enter the operation to be performed (n/u):')
-  return choice
+  operation =input('enter the operation to be done  (u/n):')
+  return operation
+
 def get_operands():
-  choice=(input('Enter the operands (set1/set2/set3):')).split(' ')
-  l1=[]
-  if 'set1' in choice and 'set2' in choice and 'set3' in choice:
-    l1.append(set1)
-    l1.append(set2) 
-    l1.append(set3)
-  elif 'set1'in choice and 'set2' in choice:
-    l1.append(set1)
-    l1.append(set2)
-  elif 'set2'in choice and 'set3' in choice:
-    l1.append(set2)
-    l1.append(set3)
-  elif 'set1'in choice and 'set3' in choice:
-    l1.append(set1)
-    l1.append(set3)
+  x=[]
+  operands=(input('enter the operands (s1/s2/s3) :')).split(' ')
+  for i in operands :
+    if i=="s1":
+      x.append(set1)
+    elif i=="s2":
+      x.append(set2)
+    else:
+      x.append(set3)
+
+  return x
+
+
+def perform_operation(operation,*operands):
+  if operation  == 'u':
+      s4=operands[0]
+      for ele in operands[1]:
+        if ele not in s4:
+          s4.append(ele)
+      s4.sort()
+
+      if len(operands)>=3:
+        s5=s4
+        for ele in operands[2]:
+          if ele not in s4:
+            s5.append(ele)
+        return s5 
+      return s4
+  elif operation == 'n':
+    s4 = []
+    for ele in operands[0]:
+      if ele in operands[1]:
+        s4.append(ele)
+    s4.sort()
+
+    if len(operands)>=3:
+      s5 = []
+      for ele in operands[2]:
+        if ele in s4:
+          s5.append(ele)
+
+      return s5
+    return s4
+
   
-  return l1
-def unionn(s1,s2):
-  s3 = s1
-  for ele in s2:
-      if ele not in s3:
-        s3.append(ele)
-  return s3
-def interr(s1,s2):
-  s3 = []
-  for ele in s1:
-      if ele in s2:
-        s3.append(ele)
-  s3.sort()
-  return s3
 
-def perform_operation(operation,operands):
-  r=[]
-  if len(operands)==2:
-    s1=operands[0]
-    s2=operands[1]
-  else:
-    s1=operands[0]
-    s2=operands[1]
-    s3=operands[2]
-  if 'u'==operation:
-    if len(operands)==2:
-      r=unionn(s1,s2)
-    else:
-      rr=unionn(s1,s2)
-      r=unionn(rr,s3)
-  elif 'n'==operation:
-    if len(operands)==2:
-      r=interr(s1,s2)
-    else:
-      rr=interr(s1,s2)
-      r=interr(rr,s3)
-
-  return set(r)
-      
 def main():
-    global setu,set1,set2,set3
-    setu = input_set()
+    global set1 ,set2, set3
+    # setu = input_set()
     set1 = input_set()
     set2 = input_set()
     set3 = input_set()
+    
     operation = get_operation()
     operands = get_operands()
-    result = perform_operation(operation,operands)
+    print(operands)
+    result =perform_operation(operation,*operands)
     print(result)
-
+    # print_report(setu,set1,set2,set3) # members in only s1 and s2, members in only s2,s3, members in only s3,s1, members not in s1,s2,s3 and members in all s1,s2,s3 
 main()
