@@ -13,7 +13,7 @@ def lot_to_cs(lot):
       l.append("=".join(a))
     return(";".join(l))
 def main():
-    cs=get_cs()
+    cs=get_cs()#calling function
 
     lot=cs_to_lot(cs)  # convert connect string to list of tuples
     print(lot)
