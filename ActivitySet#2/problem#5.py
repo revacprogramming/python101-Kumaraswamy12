@@ -1,6 +1,6 @@
 def get_cs():
     return(input())
-def cs_to_dict(cs):
+def cs_to_dict(cs):#funct declaration
     di={}
     x=cs.split(';')
     for a in x:
