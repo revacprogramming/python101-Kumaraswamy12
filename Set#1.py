@@ -5,7 +5,7 @@ def input_set():
 def get_operation():
   operation =input('enter the operation to be done  (u/n):')
   return operation
-
+  
 def get_operands():
   x=[]
   operands=(input('enter the operands (s1/s2/s3) :')).split(' ')
@@ -64,5 +64,5 @@ def main():
     print(operands)
     result =perform_operation(operation,*operands)
     print(result)
-    # print_report(setu,set1,set2,set3) # members in only s1 and s2, members in only s2,s3, members in only s3,s1, members not in s1,s2,s3 and members in all s1,s2,s3 ...
+    # print_report(setu,set1,set2,set3) # members in only s1 and s2, members in only s2,s3, members in only s3,s1, members not in s1,s2,s3 and members in all s1,s2,s3 ... question given 
 main()
