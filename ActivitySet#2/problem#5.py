@@ -1,13 +1,13 @@
 def get_cs():
     return(input())
-def cs_to_dict(cs):#funct declaration
+def cs_to_dict(cs):#funct declaration 
     di={}
     x=cs.split(';')
     for a in x:
       c=a.split("=")
       di[c[0]]=c[1]
     return(di)
-def dict_to_cs(d):
+def dict_to_cs(d):#function dict
   s=list(d.keys())[0]+"="+list(d.values())[0]
   for a in range(1,len(d)):
     s+=";"+list(d.keys())[a]+"="+list(d.values())[a]
