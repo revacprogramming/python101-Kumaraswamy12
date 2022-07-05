@@ -8,5 +8,5 @@ for line in fh:
         if tt not in ll:
             ll.append(tt)
 
-print(sorted(ll))
+print(sorted(ll))#sort function is used to sort the list
 
