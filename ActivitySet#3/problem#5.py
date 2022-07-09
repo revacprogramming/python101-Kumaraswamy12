@@ -7,7 +7,7 @@ player_score = 0
 tie=0
 while True:
     player = input("Rock, Paper or  Scissors?").capitalize()
-    ## Conditions of Rock,Paper and Scissors
+    ## Conditions of Rock,Paper and Scissors starts from 11
     if player == computer:
         print("Tie!")
         tie+=1
