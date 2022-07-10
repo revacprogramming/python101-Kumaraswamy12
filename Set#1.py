@@ -18,7 +18,6 @@ def get_operands():
       x.append(set3)
 
   return x
-
 def perform_operation(operation,*operands):
   if operation  == 'u':
       s4=operands[0]
@@ -66,3 +65,4 @@ def main():
     print(result)
     # print_report(setu,set1,set2,set3) # members in only s1 and s2, members in only s2,s3, members in only s3,s1, members not in s1,s2,s3 and members in all s1,s2,s3 ... question given 
 main()
+#repeatation done 👍
