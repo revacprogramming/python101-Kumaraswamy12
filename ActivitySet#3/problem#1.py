@@ -1,18 +1,24 @@
-import math
 def inp():
-  return(x1,y1,x2,y2,x3,y3=map(float,input().split()))
+  return list((map(float,input().split())))
   
-def process():
+def find_area(l):
+    a = l[0]*(l[3]-l[4])
+    b = l[2]*(l[5]-l[1])
+    c = l[4]*(l[1]-l[3])
+    return abs(a+b+c)
 
-  area=(math.sqrt((x3-x2)**2+(y3-y2)**2))*(math.sqrt((x2-x1)**2+(y2-y1)**2))
-  print(f"Area of rectangle with vertices ({x1},{y1}),({x2},{y2}),({x3},{y3}) is {area}" )
+def output(areas,a):
+    for _ in range(0,a):
+        for area, ver in areas.items():
+            print(f"Area of rectangle with vertices ({ver[0]},{ver[1]}),({ver[2]},{ver[3]}),({ver[4]},{ver[5]}) is {area}" )
 def main():
-  a=int(input("enter the number of rectangles:"))
-  for i in range(a):
-      process()
+    l = list()
+    areas = {}
+    a=int(input("enter the number of rectangles:"))
+    for i in range(a):
+        l.append(inp())
+        areas[find_area(l[i])] = l[i]
+    output(areas,a)
 
-main()
-#try solving in proper way
-
-
-    
+if _name_ == '_main_':
+    main()
