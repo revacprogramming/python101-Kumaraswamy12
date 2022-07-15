@@ -1,2 +1,9 @@
 def inp():
+
+
+
+def output ():
+
+
+
   
