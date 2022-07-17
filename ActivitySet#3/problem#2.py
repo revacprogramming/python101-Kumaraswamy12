@@ -9,5 +9,9 @@ def output ():
 def main():
 
 
+inp()
+
+output()
+
   
   
