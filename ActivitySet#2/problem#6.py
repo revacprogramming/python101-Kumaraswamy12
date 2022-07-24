@@ -1,20 +1,18 @@
-
-class Menu:
-  def add(x,food,price):
-           x.food=food
-           x.price=price
-  def show(x):
-        print(x.food,x.price)
-      
-
-
-  
-m = Menu()
-m.add("idly", 10)# Menu is a class
-m.show()
-m.add("vada", 20)
-m.show()
-
-
-
-
+class Menu: 
+   def __init__(self): 
+     self.my_menu=[] 
+   def add(self,name,price): 
+     self.my_menu.append((name,price)) 
+   def show(self): 
+     for a,b in self.my_menu: 
+       print(a,b) 
+ 
+ m = Menu()  # Menu is a class 
+ m.add("idly", 10) 
+ m.add("vada", 20) 
+ m.add("dosa", 30) 
+ m.add("rice", 25) 
+ #to print 
+ m.show() 
+ m1 = Menu() 
+ m1.show()
